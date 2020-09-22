@@ -1,8 +1,8 @@
 import produce from "immer";
 import { Actions } from "./clientStore.actions";
-import { State } from "./clientStore.state";
+import { ClientState } from "./clientStore.state";
 
-const reducer = (state: State, action: Actions) => {
+const reducer = (state: ClientState, action: Actions) => {
   const { type } = action;
 
   switch (type) {

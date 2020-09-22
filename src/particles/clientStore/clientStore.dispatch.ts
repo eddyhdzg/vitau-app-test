@@ -1,5 +1,5 @@
 import { Actions } from "./clientStore.actions";
 
-export type Dispatch = {
+export type ClientDispatch = {
   dispatch: (action: Actions) => void;
 };
