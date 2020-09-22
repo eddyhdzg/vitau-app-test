@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   text: {
-    marginHorizontal: "8px",
+    marginHorizontal: 8,
   },
 });
 

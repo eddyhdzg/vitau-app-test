@@ -1,11 +1,11 @@
 import React from "react";
 import { ReactQueryProvider } from "particles/serverStore";
-import { Home } from "pages";
+import { HomePage } from "pages";
 
 export default function App() {
   return (
     <ReactQueryProvider>
-      <Home />
+      <HomePage />
     </ReactQueryProvider>
   );
 }

@@ -32,8 +32,6 @@ const UserCards: React.FC = () => {
       </View>
     );
 
-  console.log(data);
-
   return (
     <View style={styles.grid}>
       {data?.results.map((user) => (

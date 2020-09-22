@@ -1,7 +1,7 @@
 import React from "react";
 import { Counter } from "molecules";
 import { UserCards } from "organisms";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import styles from "./home.jss";
 
 const Home: React.FC = () => {

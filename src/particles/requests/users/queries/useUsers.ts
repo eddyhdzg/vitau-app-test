@@ -1,6 +1,5 @@
 import { useQuery } from "react-query";
 import axios from "axios";
-import { ImageSourcePropType } from "react-native";
 
 interface Users {
   info: {
@@ -14,7 +13,7 @@ interface Users {
     episode: number[];
     gender: string;
     id: number;
-    image: ImageSourcePropType;
+    image: string;
     url: string;
     name: string;
     species: string;

@@ -4,7 +4,7 @@ import { Image, Paper } from "atoms";
 import styles from "./userCard.jss";
 
 interface IUserCardProps {
-  source: ImageSourcePropType;
+  source: string;
   name?: string;
   species: string;
   origin: { name: string; url: string };
@@ -21,7 +21,11 @@ const UserCard: React.FC<IUserCardProps> = ({
   return (
     <Paper {...rest}>
       <View style={styles.wrapper}>
-        <Image source={source} style={styles.image} resizeMode={"stretch"} />
+        <Image
+          source={{ uri: source }}
+          style={styles.image}
+          resizeMode={"stretch"}
+        />
         <View style={styles.body}>
           <View style={styles.textContainer}>
             <Text style={styles.header}>{name}</Text>
