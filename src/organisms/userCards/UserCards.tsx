@@ -2,18 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { UserCard } from "molecules";
 import { useUsers } from "particles/requests";
-
-const styles = StyleSheet.create({
-  grid: {
-    alignItems: "stretch",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    flexDirection: "row",
-  },
-  item: {
-    margin: 8,
-  },
-});
+import styles from "./userCards.jss";
 
 const UserCards: React.FC = () => {
   const { status, data } = useUsers();
