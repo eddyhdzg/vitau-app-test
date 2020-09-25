@@ -2,9 +2,9 @@ import React from "react";
 import { Counter } from "molecules";
 import { UserCards } from "organisms";
 import { View, Text } from "react-native";
-import styles from "./home.jss";
+import styles from "./homeTemplate.jss";
 
-const Home: React.FC = () => {
+const HomeTemplate: React.FC = () => {
   return (
     <View style={styles.container}>
       <View style={styles.counter}>
@@ -15,4 +15,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default HomeTemplate;

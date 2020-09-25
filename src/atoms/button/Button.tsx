@@ -1,17 +1,60 @@
 import React from "react";
-import { Button as RNButton, StyleProp, View, ViewStyle } from "react-native";
+import { TouchableOpacity, View } from "react-native";
+import {
+  IButtonPrimary,
+  IButtonSecondary,
+  IButtonTertiary,
+} from "./button.types";
+import { Box, Icon, Text } from "atoms";
+import styles from "./button.jss";
+import useButton from "./useButton";
 
-interface IButtonProps {
-  title: string;
-  onPress: (...args: any[]) => void;
-  style?: StyleProp<ViewStyle>;
-}
+const Button: React.FC<IButtonPrimary | IButtonSecondary | IButtonTertiary> = ({
+  type = "primary",
+  status = "default",
+  size = "base",
+  text,
+  onPress,
+  icon,
+  iconSide = "left",
+  style,
+  children,
+}) => {
+  const {
+    textColor,
+    boxVariant,
+    textVariant,
+    iconStyles,
+    flexDirection,
+    backgroundColor,
+    borderColor,
+    paddingHorizontal,
+  } = useButton({ iconSide, size, status, type });
 
-const Button: React.FC<IButtonProps> = ({ onPress, title, style }) => {
   return (
-    <View style={style}>
-      <RNButton onPress={onPress} title={title} />
-    </View>
+    <TouchableOpacity onPress={onPress}>
+      <Box
+        variant={boxVariant}
+        backgroundColor={backgroundColor}
+        borderColor={borderColor}
+        paddingHorizontal={paddingHorizontal}
+        style={style}
+      >
+        {children}
+
+        <View style={[styles.container, { flexDirection }]}>
+          {icon && (
+            <Icon name={icon} color={textColor} size={16} style={iconStyles} />
+          )}
+
+          {text && (
+            <Text variant={textVariant} color={textColor}>
+              {text}
+            </Text>
+          )}
+        </View>
+      </Box>
+    </TouchableOpacity>
   );
 };
 

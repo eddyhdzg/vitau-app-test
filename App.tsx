@@ -1,11 +1,14 @@
 import React from "react";
 import { ReactQueryProvider } from "particles/serverStore";
-import { HomePage } from "pages";
+import { ThemeProvider } from "theme";
+import { ButtonsPage } from "pages";
 
 export default function App() {
   return (
     <ReactQueryProvider>
-      <HomePage />
+      <ThemeProvider>
+        <ButtonsPage />
+      </ThemeProvider>
     </ReactQueryProvider>
   );
 }
