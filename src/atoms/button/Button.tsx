@@ -1,17 +1,19 @@
 import React from "react";
-import { Button as RNButton, StyleProp, View, ViewStyle } from "react-native";
+import { TouchableOpacity, View } from "react-native";
 
-interface IButtonProps {
-  title: string;
-  onPress: (...args: any[]) => void;
-  style?: StyleProp<ViewStyle>;
+import { Box, Text } from "atoms";
+
+interface Props {
+  onPress: () => void;
 }
 
-const Button: React.FC<IButtonProps> = ({ onPress, title, style }) => {
+const Button = ({ onPress }: Props) => {
   return (
-    <View style={style}>
-      <RNButton onPress={onPress} title={title} />
-    </View>
+    <TouchableOpacity onPress={onPress}>
+      <Box variant="buttonContained">
+        <Text variant="buttonDefault">Hola</Text>
+      </Box>
+    </TouchableOpacity>
   );
 };
 
