@@ -3,10 +3,7 @@ import tokens from "./tokens";
 
 export const theme = createTheme({
   spacing: tokens.units,
-  breakpoints: {
-    phone: 0,
-    tablet: 768,
-  },
+  breakpoints: {},
   colors: {
     white: tokens.colors.white,
     // Box
@@ -15,9 +12,9 @@ export const theme = createTheme({
     boxDestructive: tokens.colors.red50,
     boxSoft: tokens.colors.grey5,
     // Button
-    buttonTextDefault: tokens.colors.brandBlue,
-    buttonTextPlain: tokens.colors.grey70,
-    buttonTextDestructive: tokens.colors.red50,
+    buttonTextDefault: tokens.colors.white,
+    buttonTextOutlinedDefault: tokens.colors.brandBlue,
+    buttonTextDefaultDestructive: tokens.colors.red50,
     // Link
     link: tokens.colors.brandBlueShadow,
     // Tag
@@ -32,6 +29,39 @@ export const theme = createTheme({
   boxVariants: {
     buttonContained: {
       backgroundColor: "boxPrimary",
+      paddingHorizontal: "3xl",
+      height: 44,
+      borderRadius: 4,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    buttonContainedSuccess: {
+      backgroundColor: "boxSuccess",
+      paddingHorizontal: "3xl",
+      height: 44,
+      borderRadius: 4,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    buttonContainedDestructive: {
+      backgroundColor: "boxDestructive",
+      paddingHorizontal: "3xl",
+      height: 44,
+      borderRadius: 4,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    buttonOutlined: {
+      borderWidth: 1,
+      borderColor: "boxPrimary",
+      color: "boxPrimary",
+      paddingHorizontal: "3xl",
+      height: 44,
+      borderRadius: 4,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    buttonBlank: {
       paddingHorizontal: "3xl",
       height: 44,
       borderRadius: 4,
@@ -72,7 +102,25 @@ export const theme = createTheme({
     },
     buttonDefault: {
       fontWeight: "600",
-      color: "white",
+      color: "buttonTextDefault",
+      fontSize: 16,
+      lineHeight: 22,
+    },
+    buttonDefaultSmall: {
+      fontWeight: "600",
+      color: "buttonTextDefault",
+      fontSize: 14,
+      lineHeight: 19,
+    },
+    buttonOutlined: {
+      fontWeight: "600",
+      color: "buttonTextOutlinedDefault",
+      fontSize: 16,
+      lineHeight: 22,
+    },
+    buttonOutlinedDestructive: {
+      fontWeight: "600",
+      color: "buttonTextDefaultDestructive",
       fontSize: 16,
       lineHeight: 22,
     },
