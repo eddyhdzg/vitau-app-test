@@ -8,6 +8,24 @@ const styles = StyleSheet.create({
   header: {
     marginBottom: 60,
   },
+  sectionRow: {
+    flexDirection: "row",
+  },
+  section: {
+    marginRight: 200,
+  },
+  sectionTitle: {
+    marginBottom: 30,
+  },
+  sectionSubTitle: {
+    marginBottom: 30,
+  },
+  columns: {
+    flexDirection: "row",
+  },
+  column: {
+    marginRight: 120,
+  },
   components: {
     alignItems: "flex-start",
   },
