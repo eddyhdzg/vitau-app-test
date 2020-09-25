@@ -1,1 +1,2 @@
-export { default as Home } from "./home/Home";
+export { default as HomeTemplate } from "./homeTemplate/HomeTemplate";
+export { default as ButtonsTemplate } from "./buttonsTemplate/ButtonsTemplate";
