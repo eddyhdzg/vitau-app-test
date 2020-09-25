@@ -8,6 +8,9 @@ const styles = StyleSheet.create({
   header: {
     marginBottom: 60,
   },
+  components: {
+    alignItems: "flex-start",
+  },
   component: {
     marginBottom: 40,
   },

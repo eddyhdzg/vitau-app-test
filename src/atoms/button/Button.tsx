@@ -1,20 +1,28 @@
 import React from "react";
-import { TouchableOpacity, View } from "react-native";
-
-import { Box, Text } from "atoms";
+import { ButtonStatus, ButtonType, ButtoSize } from "./button.types";
+import ButtonPrimary from "./buttonVariants/ButtonPrimary";
 
 interface Props {
-  onPress: () => void;
+  onPress?: () => void;
+  type?: ButtonType;
+  status?: ButtonStatus;
+  size?: ButtoSize;
+  text?: string;
+  icon?: string;
 }
 
-const Button = ({ onPress }: Props) => {
-  return (
-    <TouchableOpacity onPress={onPress}>
-      <Box variant="buttonContained">
-        <Text variant="buttonDefault">Hola</Text>
-      </Box>
-    </TouchableOpacity>
-  );
+const Button: React.FC<Props> = ({
+  type = "primary",
+  size = "base",
+  ...rest
+}) => {
+  switch (type) {
+    case "primary":
+      return <ButtonPrimary size={size} {...rest} />;
+
+    default:
+      return <ButtonPrimary {...rest} />;
+  }
 };
 
 export default Button;

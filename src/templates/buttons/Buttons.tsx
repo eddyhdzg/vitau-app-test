@@ -17,8 +17,25 @@ const Buttons: React.FC = () => {
       <Text variant="sectionSubTitle" style={{ marginBottom: 30 }}>
         Default
       </Text>
-      <View style={styles.component}>
-        <Button onPress={() => console.log("press")} />
+      <View style={styles.components}>
+        <View style={styles.component}>
+          <Button text="Default" icon="plus-circle" />
+        </View>
+        <View style={styles.component}>
+          <Button text="Default" status="success" icon="plus-circle" />
+        </View>
+        <View style={styles.component}>
+          <Button text="Default" status="destructive" icon="plus-circle" />
+        </View>
+        <View style={styles.component}>
+          <Button text="Default" />
+        </View>
+        <View style={styles.component}>
+          <Button text="Default" status="success" />
+        </View>
+        <View style={styles.component}>
+          <Button text="Default" status="destructive" />
+        </View>
       </View>
     </View>
   );
