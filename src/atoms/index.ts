@@ -4,3 +4,4 @@ export { default as Icon } from "./icon/Icon";
 export { default as Image } from "./image/Image";
 export { default as Paper } from "./paper/Paper";
 export { default as Text } from "./text/Text";
+export { default as Tag } from "./tags/Tag";
