@@ -3,21 +3,32 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     paddingVertical: 60,
-<<<<<<< HEAD
-    paddingHorizontal: 30,
-=======
     paddingHorizontal: 80,
->>>>>>> Eddy/APP/restyle
   },
   header: {
     marginBottom: 60,
   },
-<<<<<<< HEAD
-=======
+  sectionRow: {
+    flexDirection: "row",
+  },
+  section: {
+    marginRight: 200,
+  },
+  sectionTitle: {
+    marginBottom: 30,
+  },
+  sectionSubTitle: {
+    marginBottom: 30,
+  },
+  columns: {
+    flexDirection: "row",
+  },
+  column: {
+    marginRight: 120,
+  },
   components: {
     alignItems: "flex-start",
   },
->>>>>>> Eddy/APP/restyle
   component: {
     marginBottom: 40,
   },

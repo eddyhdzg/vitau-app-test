@@ -1,5 +1,6 @@
 import { createTheme } from "@shopify/restyle";
 import tokens from "./tokens";
+import { boxSharedStyles } from "./themeSharedStyles";
 
 export const theme = createTheme({
   spacing: tokens.units,
@@ -14,7 +15,7 @@ export const theme = createTheme({
     // Button
     buttonTextDefault: tokens.colors.white,
     buttonTextOutlinedDefault: tokens.colors.brandBlue,
-    buttonTextDefaultDestructive: tokens.colors.red50,
+    buttonTextOutlinedDestructive: tokens.colors.red50,
     // Link
     link: tokens.colors.brandBlueShadow,
     // Tag
@@ -26,47 +27,54 @@ export const theme = createTheme({
     textSectionName: tokens.colors.grey50,
     textSectionTitle: tokens.colors.grey100,
   },
+
   boxVariants: {
     buttonContained: {
+      ...boxSharedStyles.base,
       backgroundColor: "boxPrimary",
-      paddingHorizontal: "3xl",
-      height: 44,
-      borderRadius: 4,
-      alignItems: "center",
-      justifyContent: "center",
+    },
+    buttonContainedSmall: {
+      ...boxSharedStyles.small,
+      backgroundColor: "boxPrimary",
     },
     buttonContainedSuccess: {
+      ...boxSharedStyles.base,
       backgroundColor: "boxSuccess",
-      paddingHorizontal: "3xl",
-      height: 44,
-      borderRadius: 4,
-      alignItems: "center",
-      justifyContent: "center",
+    },
+    buttonContainedSuccessSmall: {
+      ...boxSharedStyles.small,
+      backgroundColor: "boxSuccess",
     },
     buttonContainedDestructive: {
+      ...boxSharedStyles.base,
       backgroundColor: "boxDestructive",
-      paddingHorizontal: "3xl",
-      height: 44,
-      borderRadius: 4,
-      alignItems: "center",
-      justifyContent: "center",
+    },
+    buttonContainedDestructiveSmall: {
+      ...boxSharedStyles.small,
+      backgroundColor: "boxDestructive",
     },
     buttonOutlined: {
-      borderWidth: 1,
+      ...boxSharedStyles.base,
+      ...boxSharedStyles.outlined,
       borderColor: "boxPrimary",
-      color: "boxPrimary",
-      paddingHorizontal: "3xl",
-      height: 44,
-      borderRadius: 4,
-      alignItems: "center",
-      justifyContent: "center",
+    },
+    buttonOutlinedDestructive: {
+      ...boxSharedStyles.base,
+      ...boxSharedStyles.outlined,
+      borderColor: "boxDestructive",
+    },
+    buttonOutlinedSmall: {
+      ...boxSharedStyles.small,
+      ...boxSharedStyles.outlined,
+      borderColor: "boxPrimary",
+    },
+    buttonOutlinedDestructiveSmall: {
+      ...boxSharedStyles.small,
+      ...boxSharedStyles.outlined,
+      borderColor: "boxDestructive",
     },
     buttonBlank: {
-      paddingHorizontal: "3xl",
-      height: 44,
-      borderRadius: 4,
-      alignItems: "center",
-      justifyContent: "center",
+      ...boxSharedStyles.base,
     },
   },
   textVariants: {
@@ -112,6 +120,12 @@ export const theme = createTheme({
       fontSize: 14,
       lineHeight: 19,
     },
+    buttonDefaultPrice: {
+      fontWeight: "700",
+      color: "buttonTextDefault",
+      fontSize: 16,
+      lineHeight: 22,
+    },
     buttonOutlined: {
       fontWeight: "600",
       color: "buttonTextOutlinedDefault",
@@ -120,9 +134,21 @@ export const theme = createTheme({
     },
     buttonOutlinedDestructive: {
       fontWeight: "600",
-      color: "buttonTextDefaultDestructive",
+      color: "buttonTextOutlinedDestructive",
       fontSize: 16,
       lineHeight: 22,
+    },
+    buttonOutlinedSmall: {
+      fontWeight: "600",
+      color: "buttonTextOutlinedDefault",
+      fontSize: 14,
+      lineHeight: 19,
+    },
+    buttonOutlinedDestructiveSmall: {
+      fontWeight: "600",
+      color: "buttonTextOutlinedDestructive",
+      fontSize: 14,
+      lineHeight: 19,
     },
     textRegular: {
       fontWeight: "400",
