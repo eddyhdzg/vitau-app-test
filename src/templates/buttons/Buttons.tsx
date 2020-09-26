@@ -17,10 +17,6 @@ const Buttons: React.FC = () => {
       <Text variant="sectionSubTitle" style={{ marginBottom: 30 }}>
         Default
       </Text>
-<<<<<<< HEAD
-      <View style={styles.component}>
-        <Button onPress={() => console.log("press")} />
-=======
       <View style={styles.components}>
         <View style={styles.component}>
           <Button text="Default" icon="plus-circle" />
@@ -40,7 +36,6 @@ const Buttons: React.FC = () => {
         <View style={styles.component}>
           <Button text="Default" status="destructive" />
         </View>
->>>>>>> Eddy/APP/restyle
       </View>
     </View>
   );
