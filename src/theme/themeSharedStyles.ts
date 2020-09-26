@@ -16,4 +16,5 @@ export const boxSharedStyles = {
   outlined: {
     borderWidth: 1,
   },
+
 };

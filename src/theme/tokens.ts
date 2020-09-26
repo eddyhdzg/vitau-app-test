@@ -12,6 +12,21 @@ const tokens = {
     grey100: "#022a3b",
     green60: "#1b9864",
     white: "#FFFFFF",
+    //Status-Tags:
+    lightpurple: "#E6EEFF",
+    lighthblue: "#E6F7FF",
+    lightgreen: "#E9FBF4",
+    lightorange: "#FFEFE6",
+    lightred: "#FFE8E5",
+    lightyellow: "#FFF9E6",
+    purple: "#00308F",
+    blue: "#005580",
+    green: "#105B3C",
+    orange: "#BD4604",
+    red: "#A51104",
+    yellow: "#8D6C01",
+
+
   },
   units: {
     0: 0,

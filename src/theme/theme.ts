@@ -20,12 +20,26 @@ export const theme = createTheme({
     link: tokens.colors.brandBlueShadow,
     // Tag
     tagOpacity: tokens.colors.grey0,
+    //Status
+    tagPurple: tokens.colors.lightpurple,
+    tagBlue: tokens.colors.lighthblue,
+    tagGreen: tokens.colors.lightgreen,
+    tagOrange: tokens.colors.lightorange,
+    tagRed: tokens.colors.lightred,
+    tagYellow: tokens.colors.lightyellow,
     // Text
     textTitle: tokens.colors.grey100,
     textRegular: tokens.colors.grey90,
     textSecondary: tokens.colors.grey60,
     textSectionName: tokens.colors.grey50,
     textSectionTitle: tokens.colors.grey100,
+    textgray: tokens.colors.grey90,
+    textpurple: tokens.colors.purple,
+    textblue: tokens.colors.blue,
+    textyellow: tokens.colors.yellow,
+    textred: tokens.colors.red,
+    textorange: tokens.colors.orange,
+    textgreen: tokens.colors.green
   },
 
   boxVariants: {
@@ -76,7 +90,24 @@ export const theme = createTheme({
     buttonBlank: {
       ...boxSharedStyles.base,
     },
+
+    //OthersPage:
+    tagContained: {
+      paddingHorizontal: "md",
+      height: 32,
+      borderRadius: 22,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    statusContained: {
+      paddingHorizontal: "base",
+      height: 29,
+      borderRadius: 4,
+      alignItems: "center",
+      justifyContent: "center",
+    },    
   },
+
   textVariants: {
     sectionHeaderTitle: {
       color: "textSectionTitle",
@@ -155,6 +186,18 @@ export const theme = createTheme({
       color: "textRegular",
       fontSize: 16,
       lineHeight: 24,
+    },
+    textTag: {
+      fontFamily: "Open Sans",
+      fontWeight: "600",
+      fontSize: 16,
+      lineHeight: 24,
+    },
+    textStatus: {
+      fontFamily: "Open Sans",
+      fontWeight: "600",
+      fontSize: 14,
+      lineHeight: 21,
     },
   },
 });
