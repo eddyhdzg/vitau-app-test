@@ -4,6 +4,7 @@ const styles = StyleSheet.create({
   container: {
     paddingVertical: 60,
     paddingHorizontal: 80,
+    backgroundColor:'white'
   },
   header: {
     marginBottom: 60,
@@ -31,6 +32,15 @@ const styles = StyleSheet.create({
   },
   component: {
     marginBottom: 40,
+  },
+  navigation: {
+    height:60,
+    backgroundColor:'white',
+    borderBottomColor:'#D8D8D8',
+    borderBottomWidth:1,
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'center'
   },
 });
 

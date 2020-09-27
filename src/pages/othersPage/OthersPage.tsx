@@ -1,8 +1,12 @@
 import React from "react";
 import { Others } from "templates";
 
-const OthersPage: React.FC = () => {
-  return <Others />;
+interface IProps {
+  navigation:any;
+}
+
+const OthersPage: React.FC<IProps> = ({navigation}) => {
+  return <Others navigation={navigation} />;
 };
 
 export default OthersPage;

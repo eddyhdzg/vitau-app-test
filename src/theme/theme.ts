@@ -124,6 +124,13 @@ export const theme = createTheme({
       textTransform: "uppercase",
       letterSpacing: 2,
     },
+    sectionNavigationName: {
+      color: "textTitle",
+      fontWeight: "800",
+      fontSize: 20,
+      lineHeight: 19,
+      letterSpacing: 2,
+    },
     sectionTitle: {
       color: "textTitle",
       fontFamily: "Galano Grotesque Alt",

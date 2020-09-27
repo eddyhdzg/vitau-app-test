@@ -1,8 +1,12 @@
 import React from "react";
 import { Buttons } from "templates";
 
-const ButtonsPage: React.FC = () => {
-  return <Buttons />;
+interface IProps {
+  navigation:any;
+}
+
+const ButtonsPage: React.FC<IProps> = ({navigation}) => {
+  return <Buttons navigation={navigation} />;
 };
 
 export default ButtonsPage;
