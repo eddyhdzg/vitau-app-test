@@ -49,14 +49,33 @@ const styles = StyleSheet.create({
   },
   checkboxComponent: {
     flexDirection: "row",
-    marginTop: 20
+    marginTop: 0,
+    left: -17
+  },  
+  containerTextCheckbox: {
+    bottom: -11,
+    left: -13,
   },
   textCheckbox: {
+    alignItems: "center",
+    position: "relative",
+    left: -12
   },
-  containerTextCheckbox: {
-    bottom: 4,
-    left: 9,
+  radioButtons: {
+    flexDirection: "row",
+    position: "relative",
+    left: -18
   },
+  sectionTitleSecondColumnCheckbox: {
+    marginBottom: 14
+  },
+  sectionTitleSecondColumnRadioButton: {
+    marginTop: 45,
+    marginBottom: 25
+  },
+  radioButton: {
+    
+  }
 });
 
 export default styles;

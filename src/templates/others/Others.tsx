@@ -1,10 +1,11 @@
 import React from "react";
-import { View, CheckBox } from "react-native";
+import { View } from "react-native";
 // import Checkbox from "@react-native-community/checkbox"
 import styles from "./others.jss";
 import { Text, Button, Tag } from "atoms";
 import { SectionHeader } from "molecules";
 import { Switch } from 'react-native-switch';
+import { CheckBox } from "react-native-elements";
 
 const Others: React.FC = () => {
   const [isEnabled, setIsEnabled] = React.useState({active: true, inactive: false});
@@ -186,24 +187,55 @@ const Others: React.FC = () => {
           </View>
         </View>
         <View style={styles.checkbox}>
-          <Text style={styles.sectionTitle} variant="sectionTitle">Checkbox</Text>
+          <Text style={styles.sectionTitleSecondColumnCheckbox} variant="sectionTitle">Checkbox</Text>
           <View style={styles.checkboxComponent}>
             <CheckBox 
-              value={true}              
+              checked={true} 
+              checkedIcon="check-square"     
+              size={16} 
+              checkedColor="#33BBFF"
             />   
             <View style={styles.containerTextCheckbox}>
-              <Text style={styles.textCheckbox}>Some text here</Text> 
+              <Text>Some text here</Text> 
             </View>
           </View>
           <View style={styles.checkboxComponent}>
             <CheckBox 
-              value={false}
+              checked={false}
+              checkedIcon="check-square"
+              size={16} 
+              checkedColor="#33BBFF"
             />   
             <View style={styles.containerTextCheckbox}>
-              <Text style={styles.textCheckbox}>Some text here</Text> 
+              <Text>Some text here</Text> 
             </View>     
           </View>
+          <View style={styles.sectionTitleSecondColumnRadioButton}>
+            <Text variant="sectionTitle">Radio buttons</Text>
+          </View>
+          
+          <View style={styles.radioButtons}>
+            <CheckBox 
+              checked={true}  
+              size={16}
+              iconType='material'
+              checkedIcon="check-circle"                    
+              checkedColor="#33BBFF"
+            />
+            <Text style={styles.textCheckbox}>Some text here</Text>
+          </View>
+          <View style={styles.radioButtons}>
+            <CheckBox 
+              checked={false}  
+              size={16}   
+              iconType='material'              
+              uncheckedIcon="panorama-fish-eye"
+              uncheckedColor="#B3BFC4"
+            />
+            <Text style={styles.textCheckbox}>Some text here</Text>
+          </View>
         </View>
+        
       </View>
     </View>
   );
