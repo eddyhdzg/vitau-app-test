@@ -1,3 +1,4 @@
+import { position } from "@shopify/restyle";
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
@@ -10,6 +11,11 @@ const styles = StyleSheet.create({
   },
   sectionRow: {
     flexDirection: "row",
+  },
+  sectionRowSecond: {
+    flexDirection: "row",
+    paddingTop: 35,
+    // justifyContent: "space-between"
   },
   section: {
     marginRight: 200,
@@ -33,6 +39,23 @@ const styles = StyleSheet.create({
   },
   component: {
     marginBottom: 40,
+  },
+  toggles: {
+    marginVertical: 30
+  },
+  checkbox: {
+    marginLeft: "31.5%",
+    position: "relative"
+  },
+  checkboxComponent: {
+    flexDirection: "row",
+    marginTop: 20
+  },
+  textCheckbox: {
+  },
+  containerTextCheckbox: {
+    bottom: 4,
+    left: 9,
   },
 });
 

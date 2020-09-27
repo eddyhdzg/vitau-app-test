@@ -199,6 +199,12 @@ export const theme = createTheme({
       fontSize: 14,
       lineHeight: 21,
     },
+    textActive: {
+      fontFamily: "Open Sans",
+      fontWeight: "700",
+      fontSize: 14,
+      lineHeight: 14,
+    }
   },
 });
 

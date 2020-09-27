@@ -1,10 +1,17 @@
 import React from "react";
-import { View } from "react-native";
+import { View, CheckBox } from "react-native";
+// import Checkbox from "@react-native-community/checkbox"
 import styles from "./others.jss";
 import { Text, Button, Tag } from "atoms";
 import { SectionHeader } from "molecules";
+import { Switch } from 'react-native-switch';
 
 const Others: React.FC = () => {
+  const [isEnabled, setIsEnabled] = React.useState({active: true, inactive: false});
+  const toggleSwitch = (toggle: number) => {
+    if (toggle === 1) setIsEnabled({...isEnabled, active: !isEnabled.active})
+    if (toggle === 2) setIsEnabled({...isEnabled, inactive: !isEnabled.inactive})
+  }
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -101,6 +108,100 @@ const Others: React.FC = () => {
                 </View>            
               </View>
             </View>
+          </View>
+        </View>        
+      </View>
+      <View style={styles.sectionRowSecond}>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle} variant="sectionTitle">
+            Toggle
+          </Text>
+          <View>
+            <Text variant="textActive" color="textSecondary">
+              ACTIVE
+            </Text>
+          </View>
+          <View style={styles.toggles}>
+            <Switch
+              value={isEnabled.active}
+              onValueChange={() => toggleSwitch(1)}
+              activeText={''}
+              inActiveText={''}
+              circleSize={16.4}
+              barHeight={22}                           
+              backgroundActive={'#00AAFF'}
+              backgroundInactive={'#B3BFC4'}
+              circleActiveColor={'white'}
+              circleBorderWidth={0}
+              switchLeftPx={2}
+              switchRightPx={2} 
+              switchWidthMultiplier={2.683}
+              switchBorderRadius={22} 
+            />
+          </View>
+          <View>
+            <Text variant="textActive" color="textSecondary">
+              INACTIVE
+            </Text>
+          </View>
+          <View style={styles.toggles}>
+            <Switch
+              value={isEnabled.inactive}
+              onValueChange={() => toggleSwitch(2)}
+              activeText={''}
+              inActiveText={''}
+              circleSize={16.4}
+              barHeight={22}                           
+              backgroundActive={'#00AAFF'}
+              backgroundInactive={'#B3BFC4'}
+              circleActiveColor={'white'}
+              circleBorderWidth={0}
+              switchLeftPx={2}
+              switchRightPx={2} 
+              switchWidthMultiplier={2.683}
+              switchBorderRadius={22} 
+            />
+          </View>
+          <View>
+            <Text variant="textActive" color="textSecondary">
+              DISABLED
+            </Text>
+          </View>
+          <View style={styles.toggles}>
+            <Switch
+              value={false}              
+              activeText={''}
+              inActiveText={''}
+              circleSize={16.4}
+              barHeight={22}                           
+              backgroundActive={'#00AAFF'}
+              backgroundInactive={'#677F89'}
+              circleActiveColor={'white'}
+              circleBorderWidth={0}
+              switchLeftPx={2}
+              switchRightPx={2} 
+              switchWidthMultiplier={2.683}
+              switchBorderRadius={22} 
+            />
+          </View>
+        </View>
+        <View style={styles.checkbox}>
+          <Text style={styles.sectionTitle} variant="sectionTitle">Checkbox</Text>
+          <View style={styles.checkboxComponent}>
+            <CheckBox 
+              value={true}              
+            />   
+            <View style={styles.containerTextCheckbox}>
+              <Text style={styles.textCheckbox}>Some text here</Text> 
+            </View>
+          </View>
+          <View style={styles.checkboxComponent}>
+            <CheckBox 
+              value={false}
+            />   
+            <View style={styles.containerTextCheckbox}>
+              <Text style={styles.textCheckbox}>Some text here</Text> 
+            </View>     
           </View>
         </View>
       </View>
