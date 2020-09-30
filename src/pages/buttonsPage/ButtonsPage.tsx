@@ -1,12 +1,9 @@
 import React from "react";
 import { Buttons } from "templates";
+import { NavParams } from "navigation/AuthParamList";
 
-interface IProps {
-  navigation:any;
-}
-
-const ButtonsPage: React.FC<IProps> = ({navigation}) => {
-  return <Buttons navigation={navigation} />;
+const ButtonsPage: React.FC<NavParams> = ({route, navigation}) => {
+  return <Buttons navigation={navigation} route={route} />;
 };
 
 export default ButtonsPage;

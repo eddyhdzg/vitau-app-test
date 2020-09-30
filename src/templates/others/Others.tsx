@@ -5,12 +5,10 @@ import styles from "./others.jss";
 import { Text, Tag, Icon } from "atoms";
 import { SectionHeader } from "molecules";
 import { Switch } from 'react-native-switch';
+import { StackNavigationProp } from "@react-navigation/stack";
+import {  AuthNavList, NavParams } from "navigation/AuthParamList";
 
-interface IProps {
-  navigation:any;
-}
-
-const Others: React.FC<IProps> = ({navigation}) => {
+const Others: React.FC<NavParams> = ({navigation, route}: AuthNavList<'Others'>) => {
   const [isEnabled, setIsEnabled] = React.useState({active: true, inactive: false});
   const toggleSwitch = (toggle: number) => {
     if (toggle === 1) setIsEnabled({...isEnabled, active: !isEnabled.active})
@@ -19,11 +17,11 @@ const Others: React.FC<IProps> = ({navigation}) => {
   return (
     <>
       <View style={styles.navigation}>
-        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Buttons')}>
           <Icon name="arrow-left" color="black" style={{marginRight:8}} size={20} ></Icon>
         </TouchableOpacity>
-        <Text variant="sectionNavigationName">Others</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('')}>
+        <Text variant="sectionNavigationName">{route.name}</Text>
+        <TouchableOpacity onPress={() => 'none'}>
           <Icon name="arrow-right" color="black" style={{marginLeft:8}} size={20} ></Icon>
         </TouchableOpacity>
       </View>

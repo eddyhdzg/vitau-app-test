@@ -1,12 +1,10 @@
 import React from "react";
 import { Others } from "templates";
+import { NavParams } from "navigation/AuthParamList";
 
-interface IProps {
-  navigation:any;
-}
 
-const OthersPage: React.FC<IProps> = ({navigation}) => {
-  return <Others navigation={navigation} />;
+const OthersPage: React.FC<NavParams> = ({navigation, route}) => {
+  return <Others navigation={navigation} route={route} />;
 };
 
 export default OthersPage;

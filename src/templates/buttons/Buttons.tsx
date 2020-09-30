@@ -4,16 +4,18 @@ import styles from "./buttons.jss";
 import { Text, Button, Icon } from "atoms";
 import { SectionHeader } from "molecules";
 import { backgroundColor } from "@shopify/restyle";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { AuthParamList, AuthNavList, NavParams } from "navigation/AuthParamList";
 
 interface IProps {
   navigation:any;
 }
 
-const Buttons: React.FC<IProps> = ({navigation}) => {
+const Buttons: React.FC<NavParams> = ({navigation, route}:AuthNavList<'Buttons'>) => {
   return (
     <>
       <View style={styles.navigation}>
-        <Text variant="sectionNavigationName">Buttons</Text>
+        <Text variant="sectionNavigationName">{route.name}</Text>
         <TouchableOpacity onPress={() => navigation.navigate('Others')}>
         <Icon name="arrow-right" color="black" style={{marginLeft:8}} size={20} ></Icon>
         </TouchableOpacity>
