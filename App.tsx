@@ -1,7 +1,7 @@
 import React from "react";
-import { ReactQueryProvider } from "particles/serverStore";
-import { ThemeProvider } from "theme";
-import { ButtonsPage } from "pages";
+import { ReactQueryProvider } from "./src/particles/serverStore";
+import { ThemeProvider } from "./src/theme";
+import { ButtonsPage } from "./src/pages";
 
 export default function App() {
   return (

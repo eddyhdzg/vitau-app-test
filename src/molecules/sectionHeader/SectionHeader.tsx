@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
 import styles from "./sectionHeader.jss";
-import { Text } from "atoms";
+import { Text } from "../../atoms";
 
 interface Props {
   name: string;

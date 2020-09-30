@@ -15,13 +15,14 @@ export interface ButtonCommonProps {
   style?: StyleProp<TextStyle>;
 }
 
-export interface IButtonPrimary extends Omit<ButtonCommonProps, "type"> {
+export interface IButtonPrimary extends ButtonCommonProps {
   type?: "primary";
 }
 
-export interface IButtonSecondary extends Omit<ButtonCommonProps, "type"> {
+export interface IButtonSecondary extends ButtonCommonProps {
   type: "secondary";
 }
-export interface IButtonTertiary extends Omit<ButtonCommonProps, "type"> {
+export interface IButtonTertiary extends ButtonCommonProps {
   type: "tertiary";
 }
+

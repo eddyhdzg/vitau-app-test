@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { UserCard } from "molecules";
-import { useUsers } from "particles/requests";
+import { UserCard } from "../../molecules";
+import { useUsers } from "../../particles/requests";
 import styles from "./userCards.jss";
 
 const UserCards: React.FC = () => {

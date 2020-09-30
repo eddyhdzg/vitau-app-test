@@ -5,7 +5,7 @@ import {
   IButtonSecondary,
   IButtonTertiary,
 } from "./button.types";
-import { Box, Icon, Text } from "atoms";
+import { Box, Icon, Text } from "../../atoms";
 import styles from "./button.jss";
 import useButton from "./useButton";
 

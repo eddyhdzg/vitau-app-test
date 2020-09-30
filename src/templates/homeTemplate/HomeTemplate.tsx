@@ -1,6 +1,6 @@
 import React from "react";
-import { Counter } from "molecules";
-import { UserCards } from "organisms";
+import { Counter } from "../../molecules";
+import { UserCards } from "../../organisms";
 import { View, Text } from "react-native";
 import styles from "./homeTemplate.jss";
 

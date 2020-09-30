@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { Text } from "atoms";
+import { Text } from "../../atoms";
 import styles from "./buttonPriceTag.jss";
 
 const ButtonPriceTag: React.FC = ({ children }) => {

@@ -1,8 +1,8 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { useStore } from "particles/clientStore";
+import { useStore } from "../../particles/clientStore";
 import shallow from "zustand/shallow";
-import { Button } from "atoms";
+import { Button } from "../../atoms";
 import styles from "./counter.jss";
 
 const Counter: React.FC = () => {

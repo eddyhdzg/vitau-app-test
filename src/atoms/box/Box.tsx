@@ -12,7 +12,7 @@ import {
   spacing,
   SpacingProps,
 } from "@shopify/restyle";
-import { Theme } from "theme";
+import { Theme } from "../../theme"
 
 const RestyleBox = createBox<Theme>();
 

@@ -1,8 +1,8 @@
 import React from "react";
 import { View } from "react-native";
 import styles from "./buttonsTemplate.jss";
-import { Text, Button } from "atoms";
-import { SectionHeader } from "molecules";
+import { Text, Button } from "../../atoms";
+import { SectionHeader } from "../../molecules";
 import ButtonPriceTag from "../../atoms/buttonPriceTag/ButtonPriceTag";
 
 const ButtonsTemplate: React.FC = () => {

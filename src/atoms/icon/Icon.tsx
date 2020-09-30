@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { StyleProp, TextStyle } from "react-native";
 import { color, ColorProps, useRestyle } from "@shopify/restyle";
-import { Theme } from "theme";
+import { Theme } from "../../theme";
 
 interface IIconProps {
   name: string;
